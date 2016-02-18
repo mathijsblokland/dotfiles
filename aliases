@@ -1,0 +1,71 @@
+# Unix
+alias tlf="tail -f"
+alias ln='ln -v'
+alias mkdir='mkdir -p'
+alias ...='../..'
+alias l='ls'
+alias ll='ls -al'
+alias lh='ls -Alh'
+alias -g G='| grep'
+alias -g M='| less'
+alias -g ONE="| awk '{ print \$1}'"
+alias e="$EDITOR"
+alias v="$VISUAL"
+
+# fix for passing params to rake tasks
+alias rake='noglob rake'
+
+# git
+alias g='git'
+alias gs='git status -sb'
+# copy the current branch name
+alias gcb='git rev-parse --abbrev-ref HEAD | pbcopy'
+# because i make this typo a lot
+alias ggs='gs'
+# open a pull request, requires Hub to be installed (hub.github.com)
+alias gpr='git pull-request'
+
+# Bundler
+alias b="bundle"
+alias bi="bundle install"
+alias be="bundle exec"
+# because i make this typo a lot
+alias kbundle="bundle"
+
+# Rubygems
+alias gi="gem install"
+
+# Rails
+alias rk="rake"
+alias rc="bundle exec rails c"
+
+# Config Files
+alias vimrc="vim ~/.vimrc"
+alias vimrcbundles="vim ~/.vimrc.bundles"
+alias zshrc="vim ~/.zshrc"
+
+# Source zsh
+alias sourcezsh="source ~/.zshrc"
+
+# Projects
+alias p="cd ~/projects"
+alias dotfiles="cd ~/dotfiles"
+alias yoga="cd ~/projects/ror/yoga_on_rails"
+alias one="cd ~/projects/springest/one"
+
+# Rails
+alias rendered="tail -f log/development.log | grep Rendered"
+
+# Springest — ONE
+alias worker="bundle exec sidekiq -C config/sidekiq.yml -c ${WORKERS:-1}"
+alias es="elasticsearch"
+
+# Show/hide hidden files in Finder
+alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+
+# Recursively delete `.DS_Store` files
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+
+# Create symlinks under home directory of new files in dotfiles
+alias symlinks="env RCRC=$HOME/dotfiles/rcrc rcup"
