@@ -128,9 +128,12 @@ set t_Co=256
 :set noantialias
 
 " Color scheme
-colorscheme solarized
-set background=light
 set encoding=utf-8
+set background=dark
+" solarized options
+let g:solarized_visibility = "high"
+let g:solarized_contrast = "high"
+colorscheme solarized
 
 " Highlight line number of where cursor currently is
 hi CursorLineNr guifg=#050505

@@ -22,7 +22,7 @@
 [include]
   path = .gitconfig.local
 [commit]
-	template = /Users/mathijsblokland/.gitmessage
+	template = /Users/m_blokland/.gitmessage
 [user]
   name = Mathijs Blokland
   email = mathijsblokland@gmail.com
